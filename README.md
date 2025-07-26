@@ -8,7 +8,6 @@ Avec des musiques comme Travis Scott et Metro Boomin.
 ## Améliorations possibles dans le futur
 
 Ajout de nouvelles musiques
----
 
 ## Installation
 
