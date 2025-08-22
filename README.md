@@ -13,7 +13,8 @@ Ajout de nouvelles musiques
 
 Python 3 est obligatoire.
 
-Installez les dépendances avec pip :
+Installez les dépendances avec pip dans un terminal vscode :
 
 ```bash
 pip install pygame pillow
+
