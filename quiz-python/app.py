@@ -8,11 +8,12 @@ import pygame
 pygame.mixer.init()
 
 albums = {
-    "effect.jpg": "BUTTERFLY EFFECT",
-    "goosebumps.jpg": "Goosebumps",
-    "myeyes.jpg": "my eyes",
-    "raindrops.jpg": "Raindrops"
+    "effect.jpg": ["BUTTERFLY EFFECT", "Butterfly Effect"],
+    "goosebumps.jpg": ["Goosebumps"],
+    "myeyes.jpg": ["my eyes", "My Eyes"],
+    "raindrops.jpg": ["Raindrops", "Raindrops (Insane)", "Raindrops(Insane)", "RAINDROPS"]
 }
+
 
 # Correspondance image et audio
 audio_samples = {
@@ -145,26 +146,28 @@ class AlbumQuiz:
         if self.timer_id:
             self.master.after_cancel(self.timer_id)
             self.timer_id = None
-        
+    
         user_answer = self.entry.get().strip()
-        correct_answer = albums[self.album_files[self.index]]
-        
-        if self.mode.get() == "simple":
-            if user_answer.lower() in correct_answer.lower():
-                self.score += 1
-                messagebox.showinfo("Bravo !", "Bonne réponse !")
-            else:
-                messagebox.showerror("Raté", f"Mauvaise réponse...\nLa bonne réponse était : {correct_answer}")
-        elif self.mode.get() == "hardcore":
-            if user_answer.lower() == correct_answer.lower():
-                self.score += 1
-                messagebox.showinfo("Bravo !", "Bonne réponse !")
-            else:
-                messagebox.showerror("Raté", f"Mauvaise réponse...\nLa bonne réponse était : {correct_answer}")
-        
+        correct_answers = albums[self.album_files[self.index]]
+    
+        if not user_answer:
+            messagebox.showwarning("Réponse vide", "Tu dois entrer une réponse !")
+            return
+    
+        # Vérification stricte mais avec plusieurs réponses possibles
+        if any(user_answer.lower() == ans.lower() for ans in correct_answers):
+            self.score += 1
+            messagebox.showinfo("Bravo !", "Bonne réponse !")
+        else:
+            bonnes_reponses = ", ".join(correct_answers)
+            messagebox.showerror("Raté", f"Mauvaise réponse...\nLes réponses acceptées étaient : {bonnes_reponses}")
+    
         self.score_label.config(text=f"Score: {self.score}")
         self.entry.delete(0, tk.END)
         self.next_question()
+
+
+
 
     def next_question(self):
         self.index += 1
