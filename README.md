@@ -23,7 +23,7 @@ Ajout de nouvelles musiques
 
 Bug résolu : 
 
-Ne rien écrire et validé quand même -> Patché ✅
+Ne rien écrire dans la zone de texte et la réponse est quand même considérée comme juste -> Patché ✅
 
 
 ## Installation
