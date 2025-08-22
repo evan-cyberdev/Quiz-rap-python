@@ -19,3 +19,11 @@ Installez les dépendances avec pip dans un terminal vscode :
 ```bash
 pip install pygame pillow
 
+```
+---
+
+![Erreur chargement](Apercu/Capture-n1.png)
+![Erreur chargement](Apercu/Capture-n2.png)
+![Erreur chargement](Apercu/Capture-n3.png)
+![Erreur chargement](Apercu/Capture-n4.png)
+![Erreur chargement](Apercu/Capture-n5.png)
