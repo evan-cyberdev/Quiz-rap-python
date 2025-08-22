@@ -1,4 +1,4 @@
-# RAP US Quiz Python - Version Beta 0.1.2
+# RAP US Quiz Python - Version Beta 0.1.3
 
 Quiz pour deviner le nom des musiques à partir de leur pochette et d’un extrait audio.
 
