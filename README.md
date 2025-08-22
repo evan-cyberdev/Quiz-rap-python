@@ -10,22 +10,6 @@ Avec des musiques comme Travis Scott et Metro Boomin.
 Ajout de nouvelles musiques
 
 ---
-## 💻Mise à jour du code :
-
-- Ajout de l'acceptation de la réponse en majuscule et/ou en minuscule.
-
-
-- Plusieurs réponses acceptées pour la musique Raindrops :
-
-"Raindrops", "Raindrops (Insane)", "Raindrops(Insane)", "RAINDROPS"
-
-- Supprimer la possibilité de pouvoir entrée un nom approximatif 
-
-Bug résolu : 
-
-Ne rien écrire dans la zone de texte et la réponse est quand même considérée comme juste -> Patché ✅
-
-
 ## Installation
 
 Python 3 est obligatoire.
